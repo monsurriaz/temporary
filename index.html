@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">nav-1</a></li>
+        <li><a href="#">nav-2</a></li>
+        <li><a href="#">nav-3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <ul class="tabs">
+        <li class="tab active" data-content-id="tab-content-1">tab 1</li>
+        <li class="tab" data-content-id="tab-content-2">tab 2</li>
+        <li class="tab" data-content-id="tab-content-3">tab 3</li>
+      </ul>
+
+      <div id="tab-content-1" class="tab-content active">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quo dolorem placeat provident incidunt! Consequatur delectus cumque iure deleniti quisquam neque, corporis animi corrupti consequuntur illo, itaque, suscipit ut velit?
+      </div>
+      <div id="tab-content-2" class="tab-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iusto possimus ad quos repellat temporibus doloribus nobis tempora ducimus. Numquam delectus sequi, modi pariatur labore provident sapiente nihil repellendus laboriosam.
+      </div>
+      <div id="tab-content-3" class="tab-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga architecto necessitatibus inventore culpa, officiis nemo molestias temporibus quam tempora ratione iusto cupiditate voluptatem veritatis totam?
+      </div>
+    </main>
+    <!-- <script src="app.js"></script> -->
+    <script>
+      // tabs = document.querySelectorAll(".tab");
+      // tabContents = document.querySelectorAll(".tab-content");
+      // body = document.querySelector('body');
+      // nav = document.querySelector('nav');
+      // colors = ['red', 'blue', 'green'];
+
+      // for (let i = 0; i < tabs.length; i++) {
+      //   const element = tabs[i];
+      //   element.addEventListener('click', () => {
+      //     let contentId = element.dataset.contentId;
+      //     let content = document.getElementById(contentId);
+
+      //     tabContents.forEach(tabContent => {
+      //       tabContent.classList.remove('active');
+      //     });
+
+      //     tabs.forEach(tab => {
+      //       tab.classList.remove('active');
+      //     });
+
+      //     body.classList= '';
+
+      //     element.classList.add('active');
+      //     content.classList.add('active');
+      //     body.classList.add(colors[i]);
+      //   })
+      // }
+
+      window.onscroll = function() {
+        if (document.documentElement.scrollTop > 100) {
+          nav.style.height = "40px";
+          nav.classList.add('active');
+        } else if (document.documentElement.scrollTop < 100) {
+          nav.style.height = "70px";
+          nav.classList.remove('active');
+        }
+      };
+
+
+      // window.onscroll = function() {scrollFunction()};
+
+      // function scrollFunction() {
+      //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      //     document.querySelector('nav').style.height = "40px";
+      //   } else {
+      //     document.querySelector('nav').style.height = "70px";
+      //   }
+      // }
+
+      // document.addEventListener('scroll', () => {
+      //   if (document.body.scrollTop > 50) {
+      //     console.log(nav);
+      //     nav.classList.add('active');
+      //   }
+      // })
+
+
+
+      // tabs.forEach(function (tab) {
+      //   tab.addEventListener("click", function () {
+      //     contentId = this.dataset.contentId;
+      //     content = document.getElementById(contentId);
+
+      //     tabContents.forEach(function (content) {
+      //       content.classList.remove("active");
+      //     });
+
+      //     tabs.forEach(function (tab) {
+      //       tab.classList.remove("active");
+      //     });
+
+      //     body.classList.remove("red");
+
+      //     this.classList.add("active");
+      //     content.classList.add("active");
+      //     body.classList.add("blue");
+      //   });
+      // });
+    </script>
+  </body>
+</html>
